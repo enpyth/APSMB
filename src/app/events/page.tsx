@@ -14,7 +14,7 @@ export interface Event {
 export const events: Event[] = [
   {
     id: "event1",
-    title: "APMBC 2021",
+    title: "APMBC 2025",
     address: "123 Innovation Drive, Tech City, TC 12345",
     introduction: "Join us for an exciting day of technology discussions, networking, and innovation. This conference brings together industry leaders, developers, and tech enthusiasts to explore the latest trends in software development, AI, and digital transformation.",
     date: "March 15, 2024",
@@ -32,7 +32,7 @@ export const events: Event[] = [
   },
   {
     id: "event3",
-    title: "APMBC 2025",
+    title: "APMBC 2021",
     address: "789 Business Plaza, Startup Hub, SH 54321",
     introduction: "Connect with fellow entrepreneurs, investors, and startup enthusiasts. This networking event provides opportunities to share ideas, find potential partners, and learn from successful startup founders.",
     date: "March 29, 2024", 

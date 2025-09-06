@@ -128,7 +128,7 @@ export default function MembershipDetails({ membership }: MembershipDetailsProps
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
       {/* Status Alert */}
-      {!membership.verified && (
+      {!membership.is_verified && (
         <Alert severity="warning" sx={{ mb: 2 }}>
           This membership application is pending verification.
         </Alert>
@@ -144,9 +144,9 @@ export default function MembershipDetails({ membership }: MembershipDetailsProps
                 {membership.full_name}
               </Typography>
               <Chip
-                icon={membership.verified ? <Verified /> : <Pending />}
-                label={membership.verified ? 'Verified' : 'Pending'}
-                color={membership.verified ? 'success' : 'warning'}
+                icon={membership.is_verified ? <Verified /> : <Pending />}
+                label={membership.is_verified ? 'Verified' : 'Pending'}
+                color={membership.is_verified ? 'success' : 'warning'}
                 variant="outlined"
               />
             </Box>
@@ -243,7 +243,7 @@ export default function MembershipDetails({ membership }: MembershipDetailsProps
       </Card>
 
       {/* Action Buttons */}
-      {!membership.verified && (
+      {!membership.is_verified && (
         <Card>
           <CardHeader title="Verification Actions" />
           <CardContent>

@@ -15,7 +15,7 @@ export const columns: ColumnDef<Membership>[] = [
     header: 'Membership Type'
   },
   {
-    accessorKey: 'verified',
+    accessorKey: 'is_verified',
     header: 'Verified'
   },
   {

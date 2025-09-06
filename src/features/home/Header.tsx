@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Avatar, Menu, MenuItem, Container } from '@mui/material'
 import LanguageIcon from '@mui/icons-material/Language'
 import LoginIcon from '@mui/icons-material/Login'
@@ -34,23 +35,15 @@ export default function Header() {
     <AppBar position="sticky" color="transparent" elevation={0} sx={{ backdropFilter: 'blur(6px)', borderBottom: '1px solid', borderColor: 'divider' }}>
       <Container maxWidth="lg">
         <Toolbar sx={{ px: 0, minHeight: 64 }}>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="/"
-            sx={{ flexGrow: 1, textDecoration: 'none', color: 'text.primary', fontWeight: 700, letterSpacing: '.2px' }}
-          >
-            {t.header.siteTitle}
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: 'flex', gap: 2, alignItems: 'center' }}>
+            <Image src="/home/logo.png" alt="APSMB Logo" width={200} height={60} style={{ height: 'auto', maxHeight: '60px', width: 'auto' }} />
+          </Box>
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
             <Button component={Link} href="/" color="inherit">
               {t.header.home}
             </Button>
             <Button component={Link} href="/about" color="inherit">
               {t.header.about}
-            </Button>
-            <Button component={Link} href="/products" color="inherit">
-              {t.header.products}
             </Button>
             <Button component={Link} href="/events" color="inherit">
               {t.header.events}

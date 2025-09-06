@@ -5,7 +5,7 @@ export interface Membership {
   full_name: string
   email: string
   membership_type: 'visitor' | 'institutional' | 'corporate' | 'student'
-  verified: boolean
+  is_verified: boolean
   registered_at: string
   updated_at: string
   details: {
@@ -32,9 +32,9 @@ export async function getMemberships(): Promise<Membership[]> {
   const supabase = await createServerSupabaseClient()
   
   const { data, error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .select('*')
-    .order('verified', { ascending: true })
+    .order('is_verified', { ascending: true })
     .order('registered_at', { ascending: false })
 
   if (error) {
@@ -49,7 +49,7 @@ export async function getMembershipById(id: number): Promise<Membership | null> 
   const supabase = await createServerSupabaseClient()
   
   const { data, error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .select('*')
     .eq('id', id)
     .single()
@@ -69,7 +69,7 @@ export async function getMembershipByEmail(email: string): Promise<Membership | 
   const supabase = await createServerSupabaseClient()
   
   const { data, error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .select('*')
     .eq('email', email)
     .single()
@@ -89,12 +89,12 @@ export async function createMembership(membershipData: CreateMembershipData): Pr
   const supabase = await createServerSupabaseClient()
   
   const { data, error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .insert({
       full_name: membershipData.fullName,
       email: membershipData.email,
       membership_type: membershipData.membershipType,
-      verified: false,
+      is_verified: false,
       details: membershipData.details
     })
     .select()
@@ -108,13 +108,13 @@ export async function createMembership(membershipData: CreateMembershipData): Pr
   return data
 }
 
-export async function updateMembershipVerification(id: number, verified: boolean): Promise<Membership | null> {
+export async function updateMembershipVerification(id: number, is_verified: boolean): Promise<Membership | null> {
   const supabase = await createServerSupabaseClient()
   
   const { data, error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .update({ 
-      verified,
+      is_verified,
       updated_at: new Date().toISOString()
     })
     .eq('id', id)
@@ -122,7 +122,7 @@ export async function updateMembershipVerification(id: number, verified: boolean
     .single()
 
   if (error) {
-    console.error('Error updating membership verification:', error)
+    console.error("Error updating membership verification:", error);
     throw new Error('Failed to update membership verification')
   }
 
@@ -133,7 +133,7 @@ export async function deleteMembership(id: number): Promise<boolean> {
   const supabase = await createServerSupabaseClient()
   
   const { error } = await supabase
-    .from('membership')
+    .from('apmbc_membership')
     .delete()
     .eq('id', id)
 

@@ -1,26 +1,28 @@
 import Hero from '@/features/home/hero'
-import Introduction from '@/features/home/Introduction'
-import Product from '@/features/home/Product'
-import Features from '@/features/home/Features'
-import Stats from '@/features/home/Stats'
-import Testimonials from '@/features/home/Testimonials'
-import CallToAction from '@/features/home/CallToAction'
+import Conference from '@/features/home/Conference'
+import SpecialIssue from '@/features/home/SpecialIssue'
+import Chairman from '@/features/home/Chairman'
+import Roundtables from '@/features/home/Roundtables'
+import Partners from '@/features/home/Partners'
+import AboutMembership from '@/features/home/AboutMembership'
+import Notification from '@/features/home/Notification'
 
 export default function HomePage() {
   return (
     <main>
       <Hero 
         imageSrc="/banner/banner-about.jpeg" 
-        title="Welcome to NovaTech Solutions"
-        subtitle="Empowering businesses with innovative technology solutions"
+        title="Asia-Pacific Marine Biotechnology Association"
+        subtitle="Advancing marine biotechnology research and industry development across the Asia-Pacific region"
         showCTA={true}
       />
-      <Introduction />
-      <Features />
-      <Stats />
-      <Product />
-      <Testimonials />
-      <CallToAction />
+      <Notification />
+      <Conference />
+      <SpecialIssue />
+      <Chairman />
+      <Roundtables />
+      <Partners />
+      <AboutMembership />
     </main>
   )
 }
