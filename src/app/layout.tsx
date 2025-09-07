@@ -8,7 +8,6 @@ import { cookies } from 'next/headers';
 import NextTopLoader from 'nextjs-toploader';
 import { NuqsAdapter } from 'nuqs/adapters/next/app';
 import './globals.css';
-import './theme.css';
 import LayoutShell from '@/components/layout/layoutshell';
 
 const META_THEME_COLORS = {
@@ -49,14 +48,16 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body
+      {/* <body
         className={cn(
-          'bg-background overscroll-none font-sans antialiased',
+          'bg-background font-sans antialiased',
           activeThemeValue ? `theme-${activeThemeValue}` : '',
           isScaled ? 'theme-scaled' : '',
           fontVariables
         )}
-      >
+      > */}
+      <body className={'overflow-y-auto'}>
+
         <NextTopLoader showSpinner={false} />
         <NuqsAdapter>
           <ThemeProvider
