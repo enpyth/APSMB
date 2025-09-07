@@ -36,7 +36,9 @@ export default function Header() {
       <Container maxWidth="lg">
         <Toolbar sx={{ px: 0, minHeight: 64 }}>
           <Box sx={{ flexGrow: 1, display: 'flex', gap: 2, alignItems: 'center' }}>
+            <Link href="/">
             <Image src="/home/logo.png" alt="APSMB Logo" width={200} height={60} style={{ height: 'auto', maxHeight: '60px', width: 'auto' }} />
+            </Link>
           </Box>
           <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
             <Button component={Link} href="/" color="inherit">

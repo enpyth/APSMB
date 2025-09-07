@@ -1,4 +1,4 @@
-export const noLayoutRoutes = ["/error", "/login", "/dashboard"];
+export const noLayoutRoutes = ["/error", "/login", "/dashboard", "/auth"];
 
 export const managerEmail =
   process.env.NEXT_PUBLIC_MANAGER_EMAIL ?? 'zhangsu1305@gmail.com';

@@ -1,38 +1,15 @@
 import Hero from "@/features/home/hero"
-import CarouselCard from "@/components/carousel/card"
+import AboutPage from "@/features/about/components/AboutPage"
 
-const slides = [
-  {
-    id: 1,
-    image: "/placeholder.jpg",
-    title: "",
-    contents: [
-      "companyHistory1",
-    ]
-  },
-  {
-    id: 2,
-    image: "/placeholder.jpg",
-    title: "",
-    contents: [
-      "companyHistory2",
-    ]
-  },
-  {
-    id: 3,
-    image: "/placeholder.jpg",
-    title: "",
-    contents: [
-      "companyHistory3",
-    ]
-  },
-]
-
-export default function AboutUs() {
+export default function About() {
   return (
     <main className="flex-grow">
-      <Hero imageSrc="/banner/banner-about.jpeg" title="About Us" />
-      <CarouselCard slides={slides} />
+      <Hero imageSrc="/banner/placeholder_banner.jpg" title="About" />
+      <div className="container mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <AboutPage />
+        </div>
+      </div>
     </main>
   )
 }

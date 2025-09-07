@@ -25,10 +25,10 @@ export default function Footer() {
           {/* Left Section: Company Name & Description */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <h2 className="text-2xl font-bold text-white mb-2">
-              NovaTech Solutions
+              APSMB
             </h2>
             <p className="text-sm leading-relaxed max-w-xs text-white/90">
-              Empowering businesses with modern software solutions.
+              Asia-Pacific Society of Marine Biotechnology
             </p>
           </div>
 
@@ -44,11 +44,11 @@ export default function Footer() {
               </p>
               <p className="flex items-center gap-2 text-white/90">
                 <Mail className="h-4 w-4 text-white/80" />
-                <span>info@novatech.com</span>
+                <span>info@apsmb.org</span>
               </p>
               <p className="flex items-center gap-2 text-white/90">
                 <MapPin className="h-4 w-4 text-white/80" />
-                <span>123 Innovation Street, Sydney, Australia</span>
+                <span>GPO Box 2100, ADELAIDE, SA, 5001</span>
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function Footer() {
           {/* Copyright and Links */}
           <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
             <p className="text-white/80">
-              © 2025 NovaTech Solutions. All rights reserved.
+              © 2025 APSMB. All rights reserved.
             </p>
             <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2">
               <Link href="#" className="hover:text-white text-white/80 transition-colors">

@@ -43,18 +43,16 @@ export default function SignInViewPage({ stars }: { stars: number }) {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo;This starter template has saved me countless hours of work
-              and helped me deliver projects to my clients faster than ever
-              before.&rdquo;
+              &ldquo;Login to APSMB website.&rdquo;
             </p>
-            <footer className='text-sm'>Random Dude</footer>
+            <footer className='text-sm'>APSMB</footer>
           </blockquote>
         </div>
       </div>
       <div className='flex h-full items-center justify-center p-4 lg:p-8'>
         <div className='flex w-full max-w-md flex-col items-center justify-center space-y-6'>
           {/* github link  */}
-          <Link
+          {/* <Link
             className={cn('group inline-flex hover:text-yellow-200')}
             target='_blank'
             href={'https://github.com/kiranism/next-shadcn-dashboard-starter'}
@@ -70,7 +68,7 @@ export default function SignInViewPage({ stars }: { stars: number }) {
               />
               <span className='font-display font-medium'>{stars}</span>
             </div>
-          </Link>
+          </Link> */}
           <SupabaseSignIn />
 
           <p className='text-muted-foreground px-8 text-center text-sm'>

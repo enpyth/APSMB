@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <main>
       <Hero 
-        imageSrc="/banner/banner-about.jpeg" 
-        title="Asia-Pacific Marine Biotechnology Association"
+        imageSrc="/banner/placeholder_banner.jpg" 
+        title="Asia-Pacific Society of Marine Biotechnology"
         subtitle="Advancing marine biotechnology research and industry development across the Asia-Pacific region"
         showCTA={true}
       />

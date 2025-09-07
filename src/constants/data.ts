@@ -13,29 +13,36 @@ export type Product = {
 
 //Info: The following data is used for the sidebar navigation and Cmd K bar.
 export const navItems: NavItem[] = [
+  // {
+  //   title: 'Dashboard',
+  //   url: '/dashboard/overview',
+  //   icon: 'dashboard',
+  //   isActive: false,
+  //   shortcut: ['d', 'd'],
+  //   items: [] // Empty array as there are no child items for Dashboard
+  // },
+  // {
+  //   title: 'Product',
+  //   url: '/dashboard/product',
+  //   icon: 'product',
+  //   shortcut: ['p', 'p'],
+  //   isActive: false,
+  //   items: [] // No child items
+  // },
+  // {
+  //   title: 'Item',
+  //   url: '/dashboard/item',
+  //   icon: 'product',
+  //   shortcut: ['i', 'i'],
+  //   isActive: false,
+  //   items: [] // No child items
+  // },
   {
-    title: 'Dashboard',
-    url: '/dashboard/overview',
-    icon: 'dashboard',
-    isActive: false,
-    shortcut: ['d', 'd'],
-    items: [] // Empty array as there are no child items for Dashboard
-  },
-  {
-    title: 'Product',
-    url: '/dashboard/product',
-    icon: 'product',
-    shortcut: ['p', 'p'],
-    isActive: false,
-    items: [] // No child items
-  },
-  {
-    title: 'Item',
-    url: '/dashboard/item',
-    icon: 'product',
-    shortcut: ['i', 'i'],
-    isActive: false,
-    items: [] // No child items
+    title: 'Membership',
+    url: '/dashboard/membership',
+    icon: 'user2',
+    shortcut: ['m', 'm'],
+    items: []
   },
   {
     title: 'Profile',
@@ -44,13 +51,7 @@ export const navItems: NavItem[] = [
     shortcut: ['m', 'm'],
     items: []
   },
-  {
-    title: 'Membership',
-    url: '/dashboard/membership',
-    icon: 'user2',
-    shortcut: ['m', 'm'],
-    items: []
-  }
+  
 ];
 
 export interface SaleUser {

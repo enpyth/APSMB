@@ -43,11 +43,11 @@ export default function SignUpViewPage({ stars }: { stars: number }) {
         <div className='relative z-20 mt-auto'>
           <blockquote className='space-y-2'>
             <p className='text-lg'>
-              &ldquo;This starter template has saved me countless hours of work
+              &ldquo;Sign up to APSMB website.&rdquo;
               and helped me deliver projects to my clients faster than ever
               before.&rdquo;
             </p>
-            <footer className='text-sm'>Random Dude</footer>
+            <footer className='text-sm'>APSMB</footer>
           </blockquote>
         </div>
       </div>

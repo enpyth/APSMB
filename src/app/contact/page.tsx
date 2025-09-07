@@ -10,7 +10,7 @@ export default function ContactPage() {
   ]
   return (
     <main className="flex-grow">
-    <Hero imageSrc="/banner/banner-about.jpeg" title="Contact Us" />
+    <Hero imageSrc="/banner/placeholder_banner.jpg" title="Contact Us" />
     <Container maxWidth="md" sx={{ py: 6, display: 'flex', justifyContent: 'center' }}>
       <div className="w-full max-w-2xl">
         <ContactEmail subjectOptions={subjectOptions} />
