@@ -1,8 +1,6 @@
 "use client";
 
 import {
-  Container,
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -57,8 +55,7 @@ export default function Roundtables() {
           color="text.secondary"
           sx={{ maxWidth: 1200, mx: "auto" }}
         >
-          Expert discussions on key topics shaping the future of marine
-          biotechnology
+          Expert discussions on key topics shaping the future of marine biotechnology
         </Typography>
       </Box>
 

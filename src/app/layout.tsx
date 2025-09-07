@@ -48,15 +48,14 @@ export default async function RootLayout({
           }}
         />
       </head>
-      {/* <body
+      <body
         className={cn(
-          'bg-background font-sans antialiased',
+          'bg-background font-sans antialiased overflow-y-auto',
           activeThemeValue ? `theme-${activeThemeValue}` : '',
           isScaled ? 'theme-scaled' : '',
           fontVariables
         )}
-      > */}
-      <body className={'overflow-y-auto'}>
+      >
 
         <NextTopLoader showSpinner={false} />
         <NuqsAdapter>
