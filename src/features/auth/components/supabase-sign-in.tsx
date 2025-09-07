@@ -29,7 +29,7 @@ export function SupabaseSignIn() {
       toast.error(error.message)
     } else {
       toast.success('Signed in successfully!')
-      router.push('/dashboard/overview')
+      router.push('/dashboard/profile')
     }
 
     setLoading(false)

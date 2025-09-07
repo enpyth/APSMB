@@ -41,6 +41,7 @@ import {
   IconPhotoUp,
   IconUserCircle
 } from '@tabler/icons-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
@@ -75,6 +76,7 @@ export default function AppSidebar() {
 
   return (
     <Sidebar collapsible='icon'>
+      <Image src='/home/logo.png' alt='Logo' className='w-full h-auto' height={100} width={200}/>
       {/* <SidebarHeader>
         <OrgSwitcher
           tenants={tenants}
